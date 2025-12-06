@@ -1,0 +1,41 @@
+tasks = []
+
+task1 = {
+    'content': 'Làm bài tập Python',
+    'status': 'todo'
+}
+
+task2 = {
+    'content': 'Học cấu trúc dữ liệu',
+    'status': 'doing'
+}
+
+task3 = {
+    'content': 'Nộp báo cáo môn học',
+    'status': 'done'
+}
+
+tasks.append(task1)
+tasks.append(task2)
+tasks.append(task3)
+def main():
+    while True:
+        print("\n--- TODO LIST ---")
+        print("1. Thêm công việc")
+        print("2. Xem danh sách")
+        print("3. Đánh dấu hoàn thành")
+        print("4. Thoát")
+        choice = input("Chọn chức năng: ")
+        if choice == '1':
+            print("chức năng thêm công việc(chưa làm)")
+        elif choice == '2':
+            print("chức năng xem danh sách(chưa làm)")
+        elif choice == '3':
+            print("chức năng đánh dấu hoàn thành(chưa làm)")
+        elif choice == '4':
+            print("Kết thúc chương trình.")
+            break
+        else:
+            print("lựa chọn không hợp lệ")
+if __name__ == "__main__":
+    main()
