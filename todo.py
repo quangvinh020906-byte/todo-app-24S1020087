@@ -18,6 +18,13 @@ task3 = {
 tasks.append(task1)
 tasks.append(task2)
 tasks.append(task3)
+def add_task(content):
+    task = {
+        'content': content,
+        'status': 'Pending'
+    }
+    tasks.append(task)
+
 def main():
     while True:
         print("\n--- TODO LIST ---")
@@ -26,8 +33,9 @@ def main():
         print("3. Đánh dấu hoàn thành")
         print("4. Thoát")
         choice = input("Chọn chức năng: ")
-        if choice == '1':
-            print("chức năng thêm công việc(chưa làm)")
+        if choice == '1':          
+            content = input("Nhập nội dung công việc: ")
+            add_task(content)
         elif choice == '2':
             print("chức năng xem danh sách(chưa làm)")
         elif choice == '3':
