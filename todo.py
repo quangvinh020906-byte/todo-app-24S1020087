@@ -24,6 +24,14 @@ def add_task(content):
         'status': 'Pending'
     }
     tasks.append(task)
+def view_tasks():
+    if not tasks:
+        print("Danh sách công việc đang trống.")
+        return
+
+    print("\nDanh sách công việc:")
+    for i in range(len(tasks)):
+        print(f"{i + 1}. {tasks[i]['content']} - {tasks[i]['status']}")
 
 def main():
     while True:
@@ -37,7 +45,7 @@ def main():
             content = input("Nhập nội dung công việc: ")
             add_task(content)
         elif choice == '2':
-            print("chức năng xem danh sách(chưa làm)")
+            view_tasks()
         elif choice == '3':
             print("chức năng đánh dấu hoàn thành(chưa làm)")
         elif choice == '4':
